@@ -2,3 +2,4 @@
 .idea/
 credentials.json
 __pycache__
+bucket_counts.pickle
