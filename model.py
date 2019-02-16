@@ -87,8 +87,9 @@ class PlayList(object):
     @property
     def genre_counts(self):
         counter = Counter()
-        for genre in self.genres:
-            counter[genre] += 1
+        for track in self.tracks:
+            for genre in track.track.genres:
+                counter[genre] += 1
         return counter
 
     @property
