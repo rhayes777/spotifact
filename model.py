@@ -83,8 +83,20 @@ class PlayList(object):
     @property
     def tracks(self):
         if self.__tracks is None:
-            self.__tracks = list(map(PlayListTrack.from_dict, api.items_from_endpoint(watford_gap.tracks_url)))
+            self.__tracks = list(map(PlayListTrack.from_dict, api.items_from_endpoint(self.tracks_url)))
         return self.__tracks
+
+    def add_tracks(self, tracks):
+        self.tracks.extend(tracks)
+        group_size = 100
+        n = 0
+        while True:
+            group = tracks[n * group_size:(n + 1) * group_size]
+            print(len(group))
+            if len(group) == 0:
+                break
+            print(api.post_request(self.tracks_url, {"uris": [track.uri for track in group]}))
+            n += 1
 
     @property
     def date_added_genre_counts(self):
@@ -120,6 +132,10 @@ class PlayListTrack(object):
         self.added_at = added_at
         self.added_by = added_by
 
+    @property
+    def uri(self):
+        return self.track.uri
+
     @classmethod
     def from_dict(cls, playlist_track_dict):
         return PlayListTrack(Track.from_dict(playlist_track_dict["track"]),
@@ -128,13 +144,16 @@ class PlayListTrack(object):
 
 
 class Track(object):
-    def __init__(self, name, artist_hrefs):
+    def __init__(self, name, uri, artist_hrefs):
         self.name = name
+        self.uri = uri
         self.artist_hrefs = artist_hrefs
 
     @classmethod
     def from_dict(cls, track_dict):
+        print(track_dict)
         return Track(track_dict["name"],
+                     track_dict["uri"],
                      [artist["href"] for artist in track_dict["artists"]])
 
     @property
