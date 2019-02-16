@@ -12,12 +12,16 @@ class API(object):
         self.access_token = access_token
         self.authorization_header = {"Authorization": "Bearer {}".format(access_token)}
 
-    def make_request(self, endpoint):
+    def get_request(self, endpoint):
         response = requests.get(endpoint, headers=self.authorization_header)
         return json.loads(response.text)
 
+    def post_request(self, endpoint, body):
+        response = requests.post(endpoint, json=body, headers=self.authorization_header)
+        return json.loads(response.text)
+
     def items_from_endpoint(self, endpoint):
-        response = self.make_request(endpoint)
+        response = self.get_request(endpoint)
 
         while True:
             for item in response["items"]:
@@ -25,7 +29,7 @@ class API(object):
             next_endpoint = response["next"]
             if next_endpoint is None:
                 break
-            response = self.make_request(next_endpoint)
+            response = self.get_request(next_endpoint)
 
 
 with open(config.CREDENTIALS_FILE) as f:
@@ -46,9 +50,16 @@ class User(object):
         return User(user_dict["href"])
 
     @property
+    def play_lists_url(self):
+        return "{}/playlists".format(self.href)
+
+    def create_play_list(self, name):
+        return PlayList.from_dict(api.post_request(self.play_lists_url, {"name": name}))
+
+    @property
     def play_lists(self):
         if self.__play_lists is None:
-            response = api.make_request("{}/playlists".format(profile_data["href"]))
+            response = api.get_request(self.play_lists_url)
             self.__play_lists = list(map(PlayList.from_dict, response["items"]))
         return self.__play_lists
 
@@ -146,7 +157,7 @@ class Artist(object):
     def from_href(cls, href):
         try:
             if href not in Artist.href_cache:
-                Artist.href_cache[href] = Artist.from_dict(api.make_request(href))
+                Artist.href_cache[href] = Artist.from_dict(api.get_request(href))
             return Artist.href_cache[href]
         except Exception as e:
             logging.exception(e)
@@ -157,7 +168,7 @@ class Artist(object):
 
 
 user_profile_api_endpoint = "{}/me".format(config.SPOTIFY_API_URL)
-profile_data = api.make_request(user_profile_api_endpoint)
-user = User(profile_data)
+profile_data = api.get_request(user_profile_api_endpoint)
+user = User.from_dict(profile_data)
 
 watford_gap = user.playlist_with_name("Watford Gap (Service station archives)")
