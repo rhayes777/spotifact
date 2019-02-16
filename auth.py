@@ -5,14 +5,9 @@ from urllib import request as r
 import requests
 from flask import Flask, request, redirect, jsonify
 
+import config
 
 app = Flask(__name__)
-
-CREDENTIALS_FILE = "credentials.json"
-
-#  Client Keys
-CLIENT_ID = "5b236ca2ef774c849b57ec576ab1f2fa"
-CLIENT_SECRET = "861b372b9996407a931fff37d5a34e77"
 
 # Spotify URLS
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
@@ -21,11 +16,7 @@ SPOTIFY_API_BASE_URL = "https://api.spotify.com"
 API_VERSION = "v1"
 SPOTIFY_API_URL = "{}/{}".format(SPOTIFY_API_BASE_URL, API_VERSION)
 
-# Server-side Parameters
-CLIENT_SIDE_URL = "http://127.0.0.1"
-PORT = 8080
-REDIRECT_ENDPOINT = "/callback/q"
-REDIRECT_URI = "{}:{}{}".format(CLIENT_SIDE_URL, PORT, REDIRECT_ENDPOINT)
+REDIRECT_URI = "{}:{}{}".format(config.HOST, config.PORT, config.ENDPOINT)
 SCOPE = "playlist-modify-public playlist-modify-private"
 STATE = ""
 SHOW_DIALOG_bool = True
@@ -35,7 +26,7 @@ auth_query_parameters = {
     "response_type": "code",
     "redirect_uri": REDIRECT_URI,
     "scope": SCOPE,
-    "client_id": CLIENT_ID
+    "client_id": config.CLIENT_ID
 }
 
 
@@ -47,7 +38,7 @@ def index():
     return redirect(auth_url)
 
 
-@app.route(REDIRECT_ENDPOINT)
+@app.route(config.ENDPOINT)
 def callback():
     # Auth Step 4: Requests refresh and access tokens
     auth_token = request.args['code']
@@ -56,16 +47,16 @@ def callback():
         "code": str(auth_token),
         "redirect_uri": REDIRECT_URI
     }
-    base64encoded = base64.b64encode("{}:{}".format(CLIENT_ID, CLIENT_SECRET).encode("utf-8")).decode("utf-8")
+    base64encoded = base64.b64encode("{}:{}".format(config.CLIENT_ID, config.CLIENT_SECRET).encode("utf-8")).decode(
+        "utf-8")
     headers = {"Authorization": "Basic {}".format(base64encoded)}
     post_request = requests.post(SPOTIFY_TOKEN_URL, data=code_payload, headers=headers)
 
-    with open(CREDENTIALS_FILE, "w+") as f:
+    with open(config.CREDENTIALS_FILE, "w+") as f:
         f.write(post_request.text)
 
     response_data = json.loads(post_request.text)
     return jsonify(response_data)
-
 
     # access_token = response_data["access_token"]
     # refresh_token = response_data["refresh_token"]
@@ -89,6 +80,5 @@ def callback():
     # display_arr = [profile_data] + playlist_data["items"]
 
 
-
 if __name__ == "__main__":
-    app.run(debug=True, port=PORT)
+    app.run(debug=True, port=config.PORT)

@@ -1,3 +1,4 @@
 .env
 .idea/
 credentials.json
+__pycache__
