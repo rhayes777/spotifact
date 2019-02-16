@@ -14,6 +14,17 @@ class API(object):
         response = requests.get(endpoint, headers=self.authorization_header)
         return json.loads(response.text)
 
+    def items_from_endpoint(self, endpoint):
+        response = self.make_request(endpoint)
+
+        while True:
+            for item in response["items"]:
+                yield item
+            next_endpoint = response["next"]
+            if next_endpoint is None:
+                break
+            response = self.make_request(next_endpoint)
+
 
 with open(config.CREDENTIALS_FILE) as f:
     api = API(json.loads(f.read())["access_token"])
@@ -59,7 +70,7 @@ class PlayList(object):
     @property
     def tracks(self):
         if self.__tracks is None:
-            self.__tracks = list(map(PlayListTrack.from_dict, api.make_request(watford_gap.tracks_url)["items"]))
+            self.__tracks = list(map(PlayListTrack.from_dict, api.items_from_endpoint(watford_gap.tracks_url)))
         return self.__tracks
 
     def __getitem__(self, item):
