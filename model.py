@@ -144,12 +144,18 @@ class PlayListTrack(object):
                              playlist_track_dict["added_at"],
                              playlist_track_dict["added_by"])
 
+    def __hash__(self):
+        return self.uri
+
 
 class Track(object):
     def __init__(self, name, uri, artist_hrefs):
         self.name = name
         self.uri = uri
         self.artist_hrefs = artist_hrefs
+
+    def __hash__(self):
+        return self.uri
 
     @classmethod
     def from_dict(cls, track_dict):
