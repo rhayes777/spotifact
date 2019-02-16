@@ -1,5 +1,6 @@
 import json
 import logging
+from collections import defaultdict, Counter
 
 import requests
 
@@ -73,6 +74,29 @@ class PlayList(object):
         if self.__tracks is None:
             self.__tracks = list(map(PlayListTrack.from_dict, api.items_from_endpoint(watford_gap.tracks_url)))
         return self.__tracks
+
+    @property
+    def date_added_genre_counts(self):
+        date_added_genre_counts = defaultdict(Counter)
+        for track in self.tracks:
+            counter = date_added_genre_counts[track.added_at]
+            for genre in track.track.genres:
+                counter[genre] += 1
+        return date_added_genre_counts
+
+    @property
+    def genre_counts(self):
+        counter = Counter()
+        for genre in self.genres:
+            counter[genre] += 1
+        return counter
+
+    @property
+    def genres(self):
+        return {genre for track in self.tracks for genre in track.track.genres}
+
+    def tracks_with_genre(self, genre):
+        return [track for track in self.tracks if genre in track.track.genres]
 
     def __getitem__(self, item):
         return self.tracks[item]
