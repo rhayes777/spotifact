@@ -1,0 +1,561 @@
+velha guarda 1
+icelandic jazz 1
+native american 1
+bmore 1
+detroit hip hop 1
+electrofox 1
+northern soul 1
+laboratorio 1
+candy pop 1
+post-hardcore 1
+accordeon 1
+accordion 1
+slovenian electronic 1
+tropical house 1
+deep tropical house 1
+deep euro house 1
+british math rock 1
+math pop 1
+deep acoustic pop 1
+geek rock 1
+one-person band 1
+dreamo 1
+traditional english folk 1
+new jack swing 1
+retro soul 1
+cumbia funk 1
+anarcho-punk 1
+australian electropop 1
+polish reggae 1
+sevdah 1
+blues band 1
+hip house 1
+breakcore 1
+electronic trap 1
+hyperpop 1
+british comedy 1
+comedy 1
+swedish soul 1
+electroclash 1
+porro 1
+filter house 1
+electro house 1
+german techno 1
+electro 1
+swedish singer-songwriter 1
+canadian celtic 1
+chicago blues 1
+battle rap 1
+warm drone 1
+polish alternative rock 1
+rva indie 1
+ska jazz 1
+surf music 1
+dirty south rap 1
+chicago soul 1
+makossa 1
+aussietronica 1
+gauze pop 1
+contemporary country 1
+country road 1
+psychobilly 1
+bass trip 1
+ethiopian pop 1
+late romantic era 1
+classical guitar 1
+philly rap 1
+indie punk 1
+japanese jazztronica 1
+j-dance 1
+indie anthem-folk 1
+british invasion 1
+deep underground hip hop 1
+cantautor 1
+nueva cancion 1
+andean 1
+trova 1
+chilean indie 1
+la indie 1
+albuquerque indie 1
+vintage country folk 1
+argentine indie 1
+israeli indie 1
+nz indie 1
+dunedin sound 1
+dunedin indie 1
+texas blues 1
+soft rock 1
+bristol indie 1
+portuguese indie 1
+acoustic punk 1
+japanese psychedelic 1
+french jazz 1
+jazz electric bass 1
+south african alternative 1
+gnawa 1
+skiffle 1
+arab groove 1
+deep soul house 1
+outsider house 1
+techno 1
+minimal tech house 1
+acid house 1
+tech house 1
+detroit techno 1
+liquid funk 1
+drum and bass 1
+bass house 1
+house 1
+jungle 1
+disney 1
+movie tunes 1
+fluxwork 1
+classic icelandic pop 1
+finnish indie 1
+finnish electro 1
+puerto rican indie 1
+deep latin alternative 1
+dominican pop 1
+experimental psych 1
+theme 1
+indonesian jazz 1
+underground rap 1
+rhode island indie 1
+screamo punk 1
+australian hip hop 1
+dance pop 1
+bubblegum pop 1
+swedish folk pop 1
+swedish pop 1
+classic swedish pop 1
+jazz brass 1
+mambo 1
+cuban rumba 1
+jazz vibraphone 1
+canadian rock 1
+canadian indie 1
+irish rock 1
+irish indie rock 1
+midwest emo 1
+japanese post-rock 1
+instrumental post-rock 1
+finnish electronic 1
+small room 1
+edm 1
+bergen indie 1
+ghanaian hip hop 1
+brazilian rock 1
+pernambuco alternative 1
+brazilian indie 1
+rumba 1
+flamenco 1
+grime 1
+irish hip hop 1
+uk contemporary r&b 1
+uk funky 1
+australian pop 1
+speed garage 1
+europop 1
+vocal house 1
+american 21st century classical 1
+21st century classical 1
+italian jazz 1
+funky breaks 1
+atlanta indie 1
+ragtime 1
+jazz double bass 1
+german indie 1
+vienna indie 1
+stomp and whittle 1
+portland hip hop 1
+electra 1
+romanian rock 1
+boston hardcore 1
+nintendocore 1
+monterrey indie 1
+gothenburg indie 1
+swedish synthpop 1
+ontario indie 1
+cymraeg 1
+baile pop 2
+forro 2
+delta blues 2
+piedmont blues 2
+icelandic pop 2
+shamanic 2
+synthpop 2
+swedish americana 2
+jug band 2
+jazz boom bap 2
+omaha indie 2
+lilith 2
+gypsy punk 2
+balkan brass 2
+psychedelic trance 2
+chicago house 2
+dutch indie 2
+dutch rock 2
+old school hip hop 2
+krautrock 2
+australian alternative rock 2
+australian dance 2
+swedish electropop 2
+pagode 2
+austindie 2
+celtic punk 2
+celtic rock 2
+celtic 2
+memphis blues 2
+uk hip hop 2
+arab folk 2
+uk americana 2
+american post-rock 2
+jazz violin 2
+broken beat 2
+chanson 2
+french rock 2
+jazz mexicano 2
+math rock 2
+instrumental math rock 2
+nc hip hop 2
+trap queen 2
+atl hip hop 2
+australian indie 2
+shiver pop 2
+space rock 2
+substep 2
+fingerstyle 2
+abstract beats 2
+alabama indie 2
+c86 2
+milwaukee hip hop 2
+minimal 2
+dmv rap 2
+gainesville indie 2
+kiwi rock 2
+smooth jazz 2
+australian garage punk 2
+melbourne indie 2
+psychedelic blues-rock 2
+mangue bit 2
+uk alternative hip hop 2
+jazz trombone 2
+jazz clarinet 2
+indie surf 2
+dub techno 2
+uk garage 2
+afro psych 2
+soul blues 2
+balearic 2
+ye ye 2
+pub rock 2
+vaporwave 2
+indie dream pop 2
+garage pop 2
+funk rock 2
+hard rock 2
+nova mpb 2
+easy listening 2
+nu skool breaks 2
+french reggae 2
+country blues 3
+acoustic blues 3
+piano rock 3
+jump blues 3
+new romantic 3
+ok indie 3
+boogaloo 3
+neo r&b 3
+etherpop 3
+neo mellow 3
+traditional british folk 3
+new orleans blues 3
+louisiana blues 3
+urban contemporary 3
+r&b 3
+electro dub 3
+uk reggae 3
+philly indie 3
+nz reggae 3
+latin hip hop 3
+latin 3
+reggaeton 3
+puerto rican rock 3
+rock en espanol 3
+tropical 3
+folclorica 3
+chicha 3
+classic garage rock 3
+hip pop 3
+scottish indie 3
+scottish rock 3
+ska revival 3
+desert blues 3
+piano blues 3
+neo-synthpop 3
+mbalax 3
+modern alternative rock 3
+drone folk 3
+string band 3
+boom bap 3
+soul flow 3
+vapor soul 3
+lgbtq+ hip hop 3
+instrumental rock 3
+baltimore indie 3
+canadian folk 3
+portland indie 3
+traditional soul 3
+minimal techno 3
+ambeat 3
+chicago rap 3
+classify 3
+disco house 3
+idaho indie 3
+electro jazz 3
+shimmer psych 3
+vocal harmony group 4
+abstract hip hop 4
+world fusion 4
+psychill 4
+new jersey indie 4
+no wave 4
+punk 4
+chillhop 4
+nu disco 4
+boston rock 4
+toronto indie 4
+memphis soul 4
+welsh indie 4
+cumbia 4
+irish folk 4
+harmonica blues 4
+second line 4
+street band 4
+country 4
+albany ny indie 4
+new orleans jazz 4
+dixieland 4
+punk blues 4
+japanese jazz 4
+progressive rock 4
+hauntology 4
+float house 4
+modern blues rock 4
+jazz organ 4
+calypso 5
+metropopolis 5
+folk punk 5
+latin jazz 5
+brighton indie 5
+canadian modern jazz 5
+british folk 5
+southern rock 5
+west coast rap 5
+drone 5
+outlaw country 5
+power pop 5
+jangle pop 5
+ska 5
+freakbeat 5
+brill building pop 5
+jazz rap 5
+jazz trio 5
+album rock 5
+lovers rock 5
+rockabilly 5
+rock-and-roll 5
+symphonic rock 5
+deep new americana 5
+indie garage rock 5
+exotica 5
+twee pop 6
+samba 6
+nashville sound 6
+free improvisation 6
+new tribe 6
+shoegaze 6
+deep house 6
+gbvfi 6
+comic 6
+alternative country 6
+uk dub 6
+vapor twitch 6
+new orleans funk 6
+canterbury scene 6
+welsh rock 6
+glam rock 6
+electric blues 6
+south african jazz 6
+modern blues 6
+p funk 6
+ethio-jazz 6
+indie psych-rock 6
+mpb 7
+western swing 7
+cowboy western 7
+country gospel 7
+bay area indie 7
+outsider 7
+classic afrobeat 7
+bboy 7
+new wave pop 7
+banjo 7
+chicago indie 7
+glitch hop 7
+dark jazz 7
+rhythm and blues 7
+gypsy jazz 7
+southern hip hop 7
+gangster rap 7
+jazz drums 7
+latin afrobeat 7
+mellow gold 7
+underground hip hop 7
+post-disco 8
+traditional blues 8
+progressive bluegrass 8
+uk post-punk 8
+zolo 8
+jazz blues 8
+brass band 8
+future garage 8
+old-time 9
+traditional country 9
+alternative pop 9
+post-rock 9
+space age pop 9
+blues-rock 9
+american folk revival 9
+big band 9
+blues 10
+appalachian folk 10
+electropop 10
+bow pop 10
+highlife 10
+glitch 10
+east coast hip hop 10
+jazz trumpet 10
+noise rock 11
+brooklyn indie 11
+bossa nova 11
+country rock 11
+jam band 11
+drill and bass 11
+jazz guitar 11
+hardcore hip hop 11
+alternative r&b 11
+disco 12
+experimental pop 12
+instrumental funk 12
+jazz saxophone 12
+avant-garde jazz 12
+post-punk 12
+swing 12
+neo soul 12
+quiet storm 12
+dancehall 13
+bluegrass 13
+shimmer pop 13
+protopunk 13
+britpop 13
+conscious hip hop 13
+rock steady 13
+nu gaze 14
+garage psych 14
+ambient 14
+microhouse 14
+mande pop 14
+classic rock 15
+roots rock 15
+southern soul 15
+latin alternative 15
+nu-cumbia 15
+preverb 15
+turntablism 16
+compositional ambient 16
+british jazz 16
+roots reggae 17
+pop rock 17
+stride 17
+big beat 17
+singer-songwriter 18
+pop rap 18
+reggae 19
+dance-punk 19
+escape room 19
+bass music 19
+motown 20
+free jazz 20
+experimental rock 20
+lounge 20
+new americana 20
+rap 20
+experimental 22
+new wave 22
+dub 23
+adult standards 23
+dance rock 23
+electro swing 23
+jazz piano 24
+neo-psychedelic 25
+intelligent dance music 25
+classic soul 25
+indie r&b 26
+christmas 26
+dream pop 27
+folk 27
+permanent wave 28
+fourth world 28
+garage rock 28
+alternative dance 29
+slow core 30
+chamber psych 30
+hard bop 31
+alternative hip hop 31
+wonky 31
+melancholia 33
+traditional folk 33
+psychedelic rock 33
+vocal jazz 34
+new weird america 35
+anti-folk 36
+art rock 36
+acid jazz 36
+art pop 37
+indie jazz 38
+rock 38
+contemporary jazz 38
+new rave 39
+ninja 40
+hip hop 41
+world 42
+downtempo 43
+folk rock 45
+soul jazz 46
+bebop 47
+contemporary post-bop 47
+afropop 47
+noise pop 48
+chillwave 49
+jazz fusion 49
+jazz 50
+cool jazz 51
+nu jazz 55
+electronic 58
+soul 58
+lo-fi 59
+stomp and holler 59
+alternative rock 62
+jazz funk 62
+afrobeat 62
+indietronica 71
+trip hop 74
+modern rock 78
+funk 85
+chamber pop 87
+folk-pop 87
+indie folk 91
+indie rock 91
+indie pop 93
+freak folk 106
