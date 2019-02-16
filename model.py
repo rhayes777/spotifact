@@ -122,7 +122,10 @@ class PlayList(object):
         return {genre for track in self.tracks for genre in track.track.genres}
 
     def tracks_with_genre(self, genre):
-        return [track for track in self.tracks if genre in track.track.genres]
+        return list({track for track in self.tracks if genre in track.track.genres})
+
+    def tracks_with_genre_container(self, string):
+        return list({track for track in self.tracks if any([string in genre for genre in track.track.genres])})
 
     def __getitem__(self, item):
         return self.tracks[item]
@@ -145,7 +148,7 @@ class PlayListTrack(object):
                              playlist_track_dict["added_by"])
 
     def __hash__(self):
-        return self.uri
+        return hash(self.uri)
 
 
 class Track(object):
@@ -155,7 +158,7 @@ class Track(object):
         self.artist_hrefs = artist_hrefs
 
     def __hash__(self):
-        return self.uri
+        return hash(self.uri)
 
     @classmethod
     def from_dict(cls, track_dict):
@@ -199,15 +202,28 @@ user = User.from_dict(profile_data)
 watford_gap = user.playlist_with_name("Watford Gap (Service station archives)")
 
 
-def make_track_for_genres(genres):
+def make_playlist_for_genres(genres):
     tracks = list({track for genre in genres for track in watford_gap.tracks_with_genre(genre)})
     play_list = user.create_play_list(", ".join(genres))
     play_list.add_tracks(tracks)
 
 
+def make_playlist_for_substrings(substrings):
+    tracks = list({track for substring in substrings for track in watford_gap.tracks_with_genre_container(substring)})
+    play_list = user.create_play_list(", ".join(substrings))
+    play_list.add_tracks(tracks)
+
+
 if __name__ == "__main__":
-    make_track_for_genres(["freak folk"])
-    # if len(argv) > 1:
-    #     make_track_for_genres(argv[1:])
-    # for genre in watford_gap.genres:
-    #     print(genre)
+    make_playlist_for_substrings(["jazz"])
+    make_playlist_for_substrings(["folk"])
+    make_playlist_for_substrings(["tronica", "electro"])
+    make_playlist_for_substrings(["dub", "reggae"])
+    make_playlist_for_substrings(["rock"])
+    make_playlist_for_substrings(["punk"])
+    make_playlist_for_substrings(["house"])
+    make_playlist_for_substrings(["indie"])
+    make_playlist_for_substrings(["lo-fi"])
+    make_playlist_for_substrings(["experimental"])
+    make_playlist_for_substrings(["house"])
+    make_playlist_for_substrings(["blues"])
