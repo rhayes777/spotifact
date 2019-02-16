@@ -4,7 +4,6 @@
 import json
 import logging
 from collections import defaultdict, Counter
-from sys import argv
 
 import requests
 
@@ -98,6 +97,7 @@ class PlayList(object):
             group = tracks[n * group_size:(n + 1) * group_size]
             if len(group) == 0:
                 break
+            api.post_request(self.tracks_url, {"uris": [track.uri for track in group]})
             n += 1
 
     @property
@@ -153,7 +153,6 @@ class Track(object):
 
     @classmethod
     def from_dict(cls, track_dict):
-        print(track_dict)
         return Track(track_dict["name"],
                      track_dict["uri"],
                      [artist["href"] for artist in track_dict["artists"]])
@@ -195,13 +194,14 @@ watford_gap = user.playlist_with_name("Watford Gap (Service station archives)")
 
 
 def make_track_for_genres(genres):
-    tracks = {track for genre in genres for track in watford_gap.tracks_with_genre(genre)}
+    tracks = list({track for genre in genres for track in watford_gap.tracks_with_genre(genre)})
     play_list = user.create_play_list(", ".join(genres))
     play_list.add_tracks(tracks)
 
 
 if __name__ == "__main__":
-    if len(argv) > 1:
-        make_track_for_genres(argv[1:])
-    for genre in watford_gap.genres:
-        print(genre)
+    make_track_for_genres(["freak folk"])
+    # if len(argv) > 1:
+    #     make_track_for_genres(argv[1:])
+    # for genre in watford_gap.genres:
+    #     print(genre)
