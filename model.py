@@ -1,4 +1,5 @@
 import json
+import logging
 
 import requests
 
@@ -102,7 +103,7 @@ class Track(object):
 
     @property
     def artists(self):
-        return [Artist.from_href(href) for href in self.artist_hrefs]
+        return list(filter(None, map(Artist.from_href, self.artist_hrefs)))
 
     @property
     def genres(self):
@@ -118,9 +119,12 @@ class Artist(object):
 
     @classmethod
     def from_href(cls, href):
-        if href not in Artist.href_cache:
-            Artist.href_cache[href] = Artist.from_dict(api.make_request(href))
-        return Artist.href_cache[href]
+        try:
+            if href not in Artist.href_cache:
+                Artist.href_cache[href] = Artist.from_dict(api.make_request(href))
+            return Artist.href_cache[href]
+        except Exception as e:
+            logging.exception(e)
 
     @classmethod
     def from_dict(cls, artist_dict):
