@@ -9,13 +9,6 @@ import config
 
 app = Flask(__name__)
 
-# Spotify URLS
-SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
-SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
-SPOTIFY_API_BASE_URL = "https://api.spotify.com"
-API_VERSION = "v1"
-SPOTIFY_API_URL = "{}/{}".format(SPOTIFY_API_BASE_URL, API_VERSION)
-
 REDIRECT_URI = "{}:{}{}".format(config.HOST, config.PORT, config.ENDPOINT)
 SCOPE = "playlist-modify-public playlist-modify-private"
 STATE = ""
@@ -34,7 +27,7 @@ auth_query_parameters = {
 def index():
     # Auth Step 1: Authorization
     url_args = "&".join(["{}={}".format(key, r.quote(val)) for key, val in auth_query_parameters.items()])
-    auth_url = "{}/?{}".format(SPOTIFY_AUTH_URL, url_args)
+    auth_url = "{}/?{}".format(config.SPOTIFY_AUTH_URL, url_args)
     return redirect(auth_url)
 
 
@@ -50,7 +43,7 @@ def callback():
     base64encoded = base64.b64encode("{}:{}".format(config.CLIENT_ID, config.CLIENT_SECRET).encode("utf-8")).decode(
         "utf-8")
     headers = {"Authorization": "Basic {}".format(base64encoded)}
-    post_request = requests.post(SPOTIFY_TOKEN_URL, data=code_payload, headers=headers)
+    post_request = requests.post(config.SPOTIFY_TOKEN_URL, data=code_payload, headers=headers)
 
     with open(config.CREDENTIALS_FILE, "w+") as f:
         f.write(post_request.text)
